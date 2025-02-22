@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clair MultiAgent Framework</title>
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"></script>
+</head>
+<body>
+    <h2>Chat with Pharmacy Technician</h2>
+    <div id="webchat"></div>
+
+    <script>
+        window.WebChat.default({
+            initPayload: "/greet",
+            customData: { "bot_name": "pharmacy" },
+            socketUrl: "http://localhost:5010",  // Correct WebSocket URL
+            socketPath: "/socket.io/",
+            title: "Pharmacy Agent",
+            subtitle: "Treat me like a pharmacy technician",
+            inputTextFieldHint: "Type your message...",
+            showFullScreenButton: true,
+            showMessageDate: true,
+            params: {
+                storage: "none"
+            }
+        }, null);
+    </script>
+</body>
+</html>
+

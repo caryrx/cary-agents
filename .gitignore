@@ -1,0 +1,42 @@
+# Byte-compiled / packaged files
+__pycache__/
+*.py[cod]
+*.swp
+*.swo
+
+# Virtual environment
+venv*/
+.env/
+*.venv
+env/
+
+# Logs and local database
+logs/
+results/
+*.db
+*.sqlite
+*.db-journal
+
+# Rasa cache and models
+.rasa/
+models/
+*.tar.gz
+
+# Training data cache
+*.json
+*.md
+*.yml
+.cache/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
