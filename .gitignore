@@ -25,7 +25,6 @@ models/
 # Training data cache
 *.json
 *.md
-*.yml
 .cache/
 
 # Jupyter notebooks checkpoints

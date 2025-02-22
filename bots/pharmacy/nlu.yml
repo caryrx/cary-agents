@@ -1,0 +1,147 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+    - Good afternoon
+    - Good evening
+    - Hey!
+    - Howdy
+    - What's up?
+    - Hi there!
+    - Greetings
+    - Yo
+    - Morning
+    - Evening
+    - Sup?
+    - Hey, how's it going?
+    - Hello, how are you?
+    - Hi, nice to meet you
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - See you later
+    - Goodbye
+    - Take care
+    - Catch you later
+    - See you soon
+    - Bye-bye
+    - Later!
+    - Have a great day
+    - Talk to you later
+    - I'm out
+    - Peace
+    - Farewell
+
+- intent: thank_you
+  examples: |
+    - Thanks
+    - Thank you
+    - Appreciate it
+    - Thanks a lot
+    - Many thanks
+    - Thank you so much
+    - Much appreciated
+    - Thanks a ton
+    - Thanks a bunch
+    - I appreciate it
+    - Grateful
+    - Cheers
+    - Big thanks!
+    - Thank you kindly
+
+- intent: check_order_status
+  examples: |
+    - Can you check my order status?
+    - What's the status of my prescription?
+    - My name is [John Doe](name), my DOB is [1990-05-12](dob). Can you check my order?
+    - I want to know if my order is ready.
+    - Has my prescription been processed?
+    - Can you tell me if my medication is available for pickup?
+    - When will my order be ready?
+    - Any updates on my prescription order?
+    - Did my doctor send the prescription yet?
+    - What's the ETA on my order?
+    - How long until my meds are ready?
+    - Has my order shipped yet?
+    - Can you confirm if my order is in process?
+    - I placed an order, can you check the status?
+
+- intent: check_stock
+  examples: |
+    - Is [Lipitor](drug) in stock?
+    - Do you have [Metformin](drug) available?
+    - Can I get [Ibuprofen](drug) today?
+    - Do you carry [Amoxicillin](drug)?
+    - Looking to check if you have something in stock?
+    - Can you tell me if you have a drug in stock?
+    - I want to see if you have something in stock?
+    - I want to check stock of something
+    - Is [Albuterol](drug) in stock?
+    - [Albuterol](drug)
+    - [Tylenol](drug)
+    - [Aspirin](drug)
+    - [Omeprazole](drug)
+    - [Losartan](drug)
+    - [Simvastatin](drug)
+    - Do you have [Insulin](drug) available?
+    - Is [Atorvastatin](drug) currently in stock?
+    - Can I buy [Fluoxetine](drug) today?
+    - I need [Prednisone](drug), do you have it?
+    - Is [Gabapentin](drug) available now?
+    - Do you stock [Warfarin](drug)?
+    - Is [Lisinopril](drug) out of stock?
+    - Do you still have [Hydrochlorothiazide](drug) available?
+
+- intent: check_delivery
+  examples: |
+    - Do you deliver to [20001](zipcode)?
+    - Will you deliver to [20001](zipcode)?
+    - [20001](zipcode)?
+    - Can you check delivery to my zipcode?
+    - Do you offer delivery service?
+    - Can you deliver prescriptions to my home?
+    - What areas do you deliver to?
+    - Is my location within your delivery range?
+    - Do you deliver medications to [90210](zipcode)?
+    - How do I check if you deliver to my address?
+    - Do you offer free delivery?
+    - What is the delivery charge?
+    - Can I get same-day delivery?
+    - How long does delivery take?
+    - Do you have express delivery options?
+    - What’s the cutoff time for same-day delivery?
+    - Do you deliver on weekends?
+    
+- intent: out_of_scope
+  examples: |
+    - How are you doing?
+    - What's happening?
+    - Who are you?
+    - Where do you work?
+    - What's going on?
+    - Tell me a joke
+    - Who is the president?
+    - Can you recommend a movie?
+    - What's the weather like?
+    - Can you play music?
+    - Do you believe in ghosts?
+    - How do I bake a cake?
+    - What’s the capital of France?
+    - Tell me something interesting
+    - What's your favorite color?
+    - How do airplanes work?
+    - Can you sing a song?
+    - What's the meaning of life?
+    - Give me some life advice
+    - What's 2 + 2?
+    - What’s the best pizza place near me?
+    - How do I change a car tire?
+    - Do you know any good books to read?
+    - Can you tell me a fun fact?
+

@@ -1,0 +1,30 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank_you
+  - check_order_status
+  - check_stock
+  - check_delivery
+  - out_of_scope
+
+responses:
+  utter_greet:
+    - text: "Hello! I am Kevin, the virtual pharmacy technician. How can I assist you today?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_thank_you:
+    - text: "You're welcome! Let me know if you need anything else."
+
+  utter_fallback:
+    - text: "Let me think about that..."
+
+actions:
+  - action_check_order_status
+  - action_check_delivery
+  - action_check_stock
+  - action_fallback_gpt4all
+

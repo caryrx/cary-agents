@@ -1,0 +1,30 @@
+version: "3.1"
+
+language: "en"
+
+pipeline:
+- name: "SpacyNLP"
+  model: "en_core_med7_lg"  # Ensure this model is installed
+- name: "SpacyTokenizer"
+- name: "SpacyFeaturizer"
+- name: "RegexFeaturizer"
+- name: "LexicalSyntacticFeaturizer"
+- name: "CountVectorsFeaturizer"
+- name: "DIETClassifier"
+  epochs: 100
+- name: "EntitySynonymMapper"
+- name: "ResponseSelector"
+  epochs: 100
+- name: "FallbackClassifier"
+  threshold: 0.3
+- name: "SpacyEntityExtractor"
+  dimensions: ["DRUG"]
+
+policies:
+- name: "RulePolicy"
+- name: "MemoizationPolicy"
+- name: "TEDPolicy"
+  epochs: 50
+
+assistant_id: 20250222-163700-unsorted-conduction
+
