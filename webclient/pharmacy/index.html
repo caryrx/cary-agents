@@ -8,23 +8,31 @@
 </head>
 <body>
     <h2>Chat with Pharmacy Technician</h2>
+
+    <button onclick="resetChat()" style="margin-bottom: 10px;">Reset Chat</button>
+    
     <div id="webchat"></div>
 
     <script>
-        window.WebChat.default({
-            initPayload: "/greet",
-            customData: { "bot_name": "pharmacy" },
-            socketUrl: "http://localhost:5010",  // Correct WebSocket URL
-            socketPath: "/socket.io/",
-            title: "Pharmacy Agent",
-            subtitle: "Treat me like a pharmacy technician",
-            inputTextFieldHint: "Type your message...",
-            showFullScreenButton: true,
-            showMessageDate: true,
-            params: {
-                storage: "none"
-            }
-        }, null);
+        function resetChat() {
+            localStorage.removeItem("chat_session");  // Clear chat history
+            location.reload();  // Reload the page
+        }
+
+        window.addEventListener("load", function () {
+            WebChat.default({
+                initPayload: "/greet",
+                customData: { "bot_name": "pharmacy" },
+                socketUrl: "http://localhost:5010",
+                socketPath: "/socket.io/",
+                title: "Pharmacy Agent",
+                subtitle: "Treat me like a pharmacy technician",
+                inputTextFieldHint: "Type your message...",
+                showFullScreenButton: true,
+                showMessageDate: true,
+                params: { storage: "local" }  // Change to "local" if you want history to persist until reset
+            }, null);
+        });
     </script>
 </body>
 </html>
