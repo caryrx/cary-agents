@@ -62,11 +62,12 @@ class ActionCheckDelivery(Action):
             return []
 
         try:
+            print("Checking zipcode {zipcode}") 
             response = requests.get(f"{DELIVERY_API_URL}{zipcode}", timeout=5)
             response.raise_for_status()
             data = response.json()
-            delivery_status = data.get("delivers", "unknown")
-            dispatcher.utter_message(text=f"Delivery available: {delivery_status}")
+            #delivery_status = data.get("delivers", "unknown")
+            dispatcher.utter_message(text=f"Delivery available: {data}")
         except requests.exceptions.RequestException:
             dispatcher.utter_message(text="I couldn't check delivery at the moment. Please try again later.")
 
