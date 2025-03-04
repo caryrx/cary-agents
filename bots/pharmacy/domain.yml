@@ -26,5 +26,5 @@ actions:
   - action_check_order_status
   - action_check_delivery
   - action_check_stock
-  - action_fallback_gpt4all
+  - action_fallback_ollama
 

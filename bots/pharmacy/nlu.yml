@@ -121,6 +121,7 @@ nlu:
 - intent: out_of_scope
   examples: |
     - How are you doing?
+    - Is the pharmacy busy today?
     - What's happening?
     - Who are you?
     - Where do you work?

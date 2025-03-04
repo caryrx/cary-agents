@@ -16,8 +16,8 @@ stories:
     - intent: check_delivery
     - action: action_check_delivery
 
-- story: Handle unknown queries with GPT4All
+- story: Handle unknown queries with ollama
   steps:
     - intent: out_of_scope
-    - action: action_fallback_gpt4all
+    - action: action_fallback_ollama
 
