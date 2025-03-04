@@ -15,6 +15,15 @@ This project allows you to:
 
 ---
 
-## 📂 Folder Structure
+## 📂 Getting Started
+
+1. Create a venv with python 3.10 environment with python3.10 -m venv venv
+2. pip install -r requirements.txt
+3. train your model with sh ./train_agent.sh pharmacy
+4. run the action server with rasa run actions [--debug]
+5. start an agent with ./start_agent.sh pharmacy
+6. go to http://localhost:6010/
+7. ask 'can you deliver to zipcode 20001'
+8. ask it if the pharmacy is busy today 
 
 
